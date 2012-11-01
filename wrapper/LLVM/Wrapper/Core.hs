@@ -29,7 +29,7 @@ module LLVM.Wrapper.Core
     , setGC
     , getLinkage
     , setLinkage
-    
+
     -- ** Scalar constants
     , constRealOfString
     , constString
@@ -179,7 +179,7 @@ import LLVM.FFI.Core
     , pointerType
     , vectorType
     , voidType
-      
+
     , typeOf
     , dumpValue
     , constNull
@@ -247,7 +247,7 @@ import LLVM.FFI.Core
     , isTailCall
     , setTailCall
     , deleteFunction
-    
+
     , createFunctionPassManagerForModule
     , initializeFunctionPassManager
     , runFunctionPassManager
