@@ -323,8 +323,8 @@ printModuleToFile m file
                                     FFI.disposeMessage msg
                                     fail str))
 
-getTypeByName :: Module -> String -> IO Type
-getTypeByName m name = withCString name $ FFI.getTypeByName m
+getTypeByName :: Module -> String -> IO (Maybe Type)
+getTypeByName m name = fmap nullableToMaybe $ withCString name $ FFI.getTypeByName m
 
 getValueName :: Value -> IO String
 getValueName v = FFI.getValueName v >>= peekCString
